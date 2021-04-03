@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="logo">
+            <a href="/">
+                <img src="img/logo.png" width="160">
+            </a>
+        </div>
+
+        <div class="inputPosition">
+            <img class="iconEmail" src="img/mail.png" width="20px">
+            <input type="email" class="inputEmail" placeholder="Email">
+        </div>
+
+        <div class="inputPosition">
+            <img class="iconPassword" src="img/password.png" width="20px">
+            <input type="password" class="inputPassword" placeholder="Mật khẩu">
+        </div>
+
+        <div class="checkBoxPosition">
+            <input type="checkbox">
+            <span class="textCheckBox">Nhớ mật khảu</span>
+        </div>
+
+        <div class="login">
+            <a href="home_page">
+                <button class="buttonLogin">
+                    Đăng nhập
+                </button>
+            </a>
+        </div>
+
+        <div class="text">
+            <span class="textAsk">Chưa có tài khoản?</span>
+            <a href="sign_up" class="textSignUp">Đăng ký ngay</a>
+        </div>
+
+        <hr width="330px" style="margin-top: 20px">
+
+        <div class="icon">
+            <img src="img/icon-facebook.png" width="50px">
+            <img src="img/icon-twitter.png" width="55px" style="margin-left: 20px">
+            <img src="img/icon-google.png" width="45px" class="iconGoogle">
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<style>
+    body {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        background: linear-gradient(to right, #ff0066, #ff6666);
+    }
+
+    .container {
+        max-width: 1423px;
+        margin: auto;
+    }
+
+    .content {
+        width: 420px;
+        height: 535px;
+        background-color: white;
+        margin: 0 auto;
+        padding: 0;
+        margin-top: 3%;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px 5px #454545;
+        padding-top: 5px;
+    }
+
+    /*Logo*/
+    .logo {
+        text-align: center;
+    }
+
+    /*Input*/
+    .inputEmail {
+        width: 300px;
+        height: 40px;
+        font-family: Arial;
+        font-size: 15px;
+        border: 2px solid #ff0066;
+        border-radius: 10px;
+        margin-top: 10px;
+        padding-left: 30px;
+    }
+
+    .iconEmail {
+        position: absolute;
+        margin-top: 22px;
+        margin-left: 7px;
+    }
+
+    .inputPassword {
+        width: 300px;
+        height: 40px;
+        font-family: Arial;
+        font-size: 15px;
+        margin-top: 20px;
+        border: 2px solid #ff0066;
+        border-radius: 10px;
+        padding-left: 30px;
+    }
+
+    .iconPassword {
+        position: absolute;
+        margin-top: 32px;
+        margin-left: 7px;
+    }
+
+    .inputPosition {
+        text-align: center;
+    }
+
+    /*Text*/
+    .text {
+        margin-top: 18px;
+        margin-left: 127px;
+    }
+
+    .textAsk {
+        font-family: Arial;
+    }
+
+    .textSignUp {
+        color: #e33483;
+        font-weight: bold;
+        font-family: Arial;
+    }
+
+    .textSignUp:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    /*CheckBox*/
+    .textCheckBox {
+        font-family: Arial;
+    }
+
+    .checkBoxPosition {
+        margin-top: 17px;
+        margin-left: 39px;
+    }
+
+    /*Button*/
+    .login {
+        text-align: center;
+        margin-top: 18px;
+    }
+
+    .buttonLogin {
+        width: 335px;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial;
+        color: white;
+        background: linear-gradient(to right, #ff6666, #ff0066);
+    }
+
+    .buttonLogin:hover {
+        background: linear-gradient(to right, #ff0066, #ff6666);
+        border: none;
+        cursor: pointer;
+        color: white;
+    }
+
+    /*Icon*/
+    .icon {
+        width: 200px;
+        height: 60px;
+        margin-left: 45px;
+        margin-top: 15px;
+    }
+
+    .iconGoogle {
+        margin-bottom: 3px;
+        margin-left: 20px;
+    }
+</style>

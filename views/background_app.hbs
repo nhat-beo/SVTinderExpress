@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <img src="img/Background.jpg" width="100%" style="filter: brightness(50%)">
+
+    <div class="logo">
+        <img src="img/logo.png" width="60">
+        <span class="textLogo">Tinder</span>
+    </div>
+
+    <div class="language">
+        <img src="img/language.png" width="25">
+        <span class="textLanguage">Tiếng Việt</span>
+    </div>
+
+    <div class="login">
+        <button class="buttonLogin" onclick="document.location='sign_in'">
+            Đăng nhập
+        </button>
+    </div>
+
+    <div class="middle">
+        <div class="content">
+                <span class="textContent">
+                    Connect Everyone
+                </span>
+        </div>
+
+        <div class="signUp">
+            <button class="buttonSignup" onclick="document.location='sign_up'">
+                Lập tài khoản
+            </button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<style>
+    body {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 1423px;
+        margin: auto;
+    }
+
+    /*Logo*/
+    .logo {
+        position: relative;
+        top: -680px;
+        margin-left: 20px;
+    }
+
+    .textLogo {
+        position: relative;
+        top: -8px;
+        color: white;
+        font-weight: bold;
+        font-family: Arial;
+        font-size: 60px;
+    }
+
+    /*Language*/
+    .language {
+        position: relative;
+        top: -740px;
+        margin-left: 1000px;
+    }
+
+    .textLanguage {
+        color: white;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 25px;
+        position: relative;
+        top: -3px;
+        margin-left: 10px;
+    }
+
+    /*Login*/
+    .buttonLogin {
+        width: 170px;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        background: white;
+        position: relative;
+        top: -778px;
+        margin-left: 1210px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial;
+        color: #e33483;
+    }
+
+    .buttonLogin:hover {
+        background: linear-gradient(to right, #ff0066, #ff6666);
+        border: none;
+        cursor: pointer;
+        color: white;
+    }
+
+    /*Middle*/
+    .middle {
+        position: relative;
+        top: -580px;
+        margin-left: 300px;
+    }
+
+    .textContent {
+        font-size: 105px;
+        font-weight: bolder;
+        font-family: Arial;
+        color: white;
+    }
+
+    .buttonSignup {
+        width: 280px;
+        height: 55px;
+        border-radius: 50px;
+        border: none;
+        background: linear-gradient(to right, #ff0066, #ff6666);
+        margin-left: 270px;
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial;
+        color: white;
+    }
+
+    .buttonSignup:hover {
+        background: linear-gradient(to right, #ff6666, #ff0066);
+        border: none;
+        cursor: pointer;
+    }
+</style>
