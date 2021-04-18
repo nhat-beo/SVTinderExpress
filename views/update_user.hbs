@@ -8,7 +8,7 @@
 <div class="container">
     <div class="aside">
         <div class="headerAside">
-            <a href="home_page" class="textInfo">< Cài đặt tài khoản</a>
+            <a href="my_information" class="textInfo">< Sửa thông tin người dùng</a>
         </div>
 
         <div class="bodyAside">
@@ -22,7 +22,7 @@
                     </div>
 
                     <div>
-                        <a href="update_user">
+                        <a>
                             <button class="button">Sửa thông tin người dùng</button>
                         </a>
                     </div>
@@ -120,82 +120,84 @@
     </div>
 
     <div class="article">
-        <div class="changeInfoForm">
-            <div class="photo">
-                <div class="changeAvatar">
-                    <input type="file" name="avatar" multiple/>
-                </div>
-                <!--                <section class="btnPosition">-->
-                <!--                    <button class="btnChangeImage">Đổi ảnh đại diện</button>-->
-                <!--                </section>-->
-            </div>
-
-            <form action="add_user" enctype="multipart/form-data" method="post" name="add_user">
-                <div class="inputForm">
-                    <section class="input">
-                        <span class="textInput">Họ</span>
-                        <input type="text" class="inputInfo" placeholder="last name" style="margin-left: 92.5px"
-                               name="lastname">
-                    </section>
-
-                    <section class="input">
-                        <span class="textInput">Tên</span>
-                        <input type="text" class="inputInfo" placeholder="first name" style="margin-left: 85px"
-                               name="firstname">
-                    </section>
-
-                    <section class="input">
-                        <span class="textInput">Ngày sinh</span>
-                        <input type="text" class="inputInfo" placeholder="date birth" style="margin-left: 37px"
-                               name="birthday">
-                    </section>
-
-                    <section class="input">
-                        <span class="textInput">Trường học</span>
-                        <input type="text" class="inputInfo" placeholder="school" style="margin-left: 23px"
-                               name="school">
-                    </section>
-
-                    <section class="input">
-                        <span class="textInput">Email</span>
-                        <input type="text" class="inputInfo" placeholder="email" style="margin-left: 71px" name="email">
-                    </section>
-
-                    <section class="input">
-                        <span class="textInput">Số điện thoại</span>
-                        <input type="text" class="inputInfo" placeholder="phone number" style="margin-left: 14px"
-                               name="phone">
-                    </section>
-
-                    <section class="input">
-                        <span class="textInput">Giới tính</span>
-
-                        <input type="radio" id="male" name="gender" value="male" style="margin-left: 14px">
-                        <label for="male" style="font-family: Arial">Nam</label>
-                        <input type="radio" id="female" name="gender" value="female">
-                        <label for="female" style="font-family: Arial">Nữ</label>
-                    </section>
-
-                    <section class="input">
-                        <span class="textInput">Sở thích</span>
-                        <input type="text" class="inputInfo" placeholder="hobbies" style="margin-left: 50px"
-                               name="hobbies">
-                    </section>
-
-                    <section class="input">
-                        <span class="textInput">Giới thiệu</span>
-                        <textarea rows="4" cols="40" class="textArea" placeholder="description"
-                                  name="description"></textarea>
-                    </section>
-
-                    <div style="text-align: center">
-                        <button class="btnSave" type="submit">
-                            Lưu thông tin
-                        </button>
+        {{#user}}
+            <div class="changeInfoForm">
+                <div class="photo">
+                    <div class="changeAvatar">
+                        <input type="file" name="avatarFix" multiple/>
                     </div>
+                    <!--                <section class="btnPosition">-->
+                    <!--                    <button class="btnChangeImage">Đổi ảnh đại diện</button>-->
+                    <!--                </section>-->
                 </div>
-            </form>
-        </div>
+
+                <form action="update_user.id={{this._id}}" enctype="multipart/form-data" method="post" name="fix_user">
+                    <div class="inputForm">
+                        <section class="input">
+                            <span class="textInput">Họ</span>
+                            <input type="text" class="inputInfo" placeholder="last name" style="margin-left: 92.5px"
+                                   name="lastname" value="{{this.lastname}}">
+                        </section>
+
+                        <section class="input">
+                            <span class="textInput">Tên</span>
+                            <input type="text" class="inputInfo" placeholder="first name" style="margin-left: 85px"
+                                   name="firstname" value="{{this.firstname}}">
+                        </section>
+
+                        <section class="input">
+                            <span class="textInput">Ngày sinh</span>
+                            <input type="text" class="inputInfo" placeholder="date birth" style="margin-left: 37px"
+                                   name="birthday" value="{{this.birthday}}">
+                        </section>
+
+                        <section class="input">
+                            <span class="textInput">Trường học</span>
+                            <input type="text" class="inputInfo" placeholder="school" style="margin-left: 23px"
+                                   name="school" value="{{this.school}}">
+                        </section>
+
+                        <section class="input">
+                            <span class="textInput">Email</span>
+                            <input type="text" class="inputInfo" placeholder="email" style="margin-left: 71px" name="email" value="{{this.email}}">
+                        </section>
+
+                        <section class="input">
+                            <span class="textInput">Số điện thoại</span>
+                            <input type="text" class="inputInfo" placeholder="phone number" style="margin-left: 14px"
+                                   name="phone" value="{{this.phone}}">
+                        </section>
+
+                        <section class="input">
+                            <span class="textInput">Giới tính</span>
+
+                            <input type="radio" id="male" name="gender" value="male" style="margin-left: 14px" {{checked gender 'male'}}>
+                            <label for="male" style="font-family: Arial">Nam</label>
+                            <input type="radio" id="female" name="gender" value="female"  {{checked gender 'female'}}>
+                            <label for="female" style="font-family: Arial">Nữ</label>
+                        </section>
+
+                        <section class="input">
+                            <span class="textInput">Sở thích</span>
+                            <input type="text" class="inputInfo" placeholder="hobbies" style="margin-left: 50px"
+                                   name="hobbies" value="{{this.hobbies}}">
+                        </section>
+
+                        <section class="input">
+                            <span class="textInput">Giới thiệu</span>
+                            <textarea rows="4" cols="40" class="textArea" placeholder="description"
+                                      name="description" value="{{this.description}}"></textarea>
+                        </section>
+
+                        <div style="text-align: center">
+                            <button class="btnSave" type="submit">
+                                Sửa thông tin
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        {{/user}}
     </div>
 </div>
 </body>

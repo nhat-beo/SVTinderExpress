@@ -8,27 +8,46 @@
 <div class="container">
     <div class="aside">
         <div class="headerAside">
-            <a href="my_information">
+            <a>
                 <img src="img/avatar.jpg" width="40px" class="imgAvatar">
             </a>
-            <a href="my_information" class="textInfo">Cài đặt tài khoản</a>
+            <a class="textInfo">Danh sách người dùng</a>
         </div>
 
         <div class="bodyAside">
-
+            <div>
+                <a href="my_information">
+                    <button class="buttonAside">Thêm người dùng</button>
+                </a>
+            </div>
         </div>
     </div>
 
     <div class="article">
-        <div class="people">
-            <img class="imgGirl" src="img/girl.jpg" width="370px">
-            <div class="text">
-                <span class="textGirl">Phương Linh 20</span>
-                <div style="margin-top: 7px">
-                    <span class="textContent">Dù đã 20 nhưng chưa có 1 mảnh tình vắt vai :))</span>
+        {{#each users}}
+            <div class="info">
+                <div>{{this.lastname}}</div>
+                <div>{{this.firstname}}</div>
+                <div>{{this.birthday}}</div>
+                <div>{{this.school}}</div>
+                <div>{{this.email}}</div>
+                <div>{{this.phone}}</div>
+                <div>{{this.gender}}</div>
+                <div>{{this.hobbies}}</div>
+                <div>{{this.description}}</div>
+                <div>
+                    <a href="update_user.id={{this._id}}">
+                    <button>Sửa thông tin</button>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="delete_user.id={{this._id}}">
+                    <button>Xóa thông tin</button>
+                    </a>
                 </div>
             </div>
-        </div>
+        {{/each}}
     </div>
 </div>
 </body>
@@ -114,5 +133,28 @@
     .textContent {
         font-size: 20px;
         font-family: Arial;
+    }
+
+    .info {
+        margin-left: 20px;
+        margin-bottom: 20px;
+        font-family: Arial;
+        font-weight: bold;
+    }
+
+    /*Button*/
+    .buttonAside {
+        width: 100%;
+        height: 40px;
+        border: none;
+        background-color: #dbdbdb;
+        margin-bottom: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .buttonAside:hover {
+        background: linear-gradient(to right, #ff0066, #ff6666);
+        cursor: pointer;
     }
 </style>
